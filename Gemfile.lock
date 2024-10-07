@@ -1,0 +1,91 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bigdecimal (3.1.8)
+    connection_pool (2.4.1)
+    faraday (2.11.0)
+      faraday-net_http (>= 2.0, < 3.4)
+      logger
+    faraday-net_http (3.3.0)
+      net-http
+    ffaker (2.23.0)
+    google-protobuf (4.28.1)
+      bigdecimal
+      rake (>= 13)
+    googleapis-common-protos-types (1.15.0)
+      google-protobuf (>= 3.18, < 5.a)
+    logger (1.6.1)
+    net-http (0.4.1)
+      uri
+    nio4r (2.7.3)
+    opentelemetry-api (1.4.0)
+    opentelemetry-common (0.21.0)
+      opentelemetry-api (~> 1.0)
+    opentelemetry-exporter-otlp (0.29.0)
+      google-protobuf (>= 3.18)
+      googleapis-common-protos-types (~> 1.3)
+      opentelemetry-api (~> 1.1)
+      opentelemetry-common (~> 0.20)
+      opentelemetry-sdk (~> 1.2)
+      opentelemetry-semantic_conventions
+    opentelemetry-instrumentation-base (0.22.6)
+      opentelemetry-api (~> 1.0)
+      opentelemetry-common (~> 0.21)
+      opentelemetry-registry (~> 0.1)
+    opentelemetry-instrumentation-faraday (0.24.6)
+      opentelemetry-api (~> 1.0)
+      opentelemetry-instrumentation-base (~> 0.22.1)
+    opentelemetry-instrumentation-rack (0.24.6)
+      opentelemetry-api (~> 1.0)
+      opentelemetry-instrumentation-base (~> 0.22.1)
+    opentelemetry-instrumentation-redis (0.25.7)
+      opentelemetry-api (~> 1.0)
+      opentelemetry-instrumentation-base (~> 0.22.1)
+    opentelemetry-registry (0.3.1)
+      opentelemetry-api (~> 1.1)
+    opentelemetry-sdk (1.5.0)
+      opentelemetry-api (~> 1.1)
+      opentelemetry-common (~> 0.20)
+      opentelemetry-registry (~> 0.2)
+      opentelemetry-semantic_conventions
+    opentelemetry-semantic_conventions (1.10.1)
+      opentelemetry-api (~> 1.0)
+    puma (6.4.2)
+      nio4r (~> 2.0)
+    rack (3.1.7)
+    rackup (2.1.0)
+      rack (>= 3)
+      webrick (~> 1.8)
+    rake (13.2.1)
+    redis (5.3.0)
+      redis-client (>= 0.22.0)
+    redis-client (0.22.2)
+      connection_pool
+    roda (3.83.0)
+      rack
+    uri (0.13.1)
+    webrick (1.8.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  faraday (~> 2.11)
+  ffaker (~> 2.23)
+  opentelemetry-common (~> 0.21.0)
+  opentelemetry-exporter-otlp (~> 0.29.0)
+  opentelemetry-instrumentation-faraday (~> 0.24.6)
+  opentelemetry-instrumentation-rack (~> 0.24.6)
+  opentelemetry-instrumentation-redis (~> 0.25.7)
+  opentelemetry-sdk (~> 1.5)
+  puma (~> 6.4, >= 6.4.2)
+  rack (~> 3.1.7)
+  rackup (~> 2.1)
+  redis (~> 5.3)
+  roda (~> 3.83)
+
+RUBY VERSION
+   ruby 3.2.4p170
+
+BUNDLED WITH
+   2.4.19
